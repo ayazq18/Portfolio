@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@300;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@300;500;700&display=swap");
 * {
   /* box-sizing: border-box; */
   margin: 0px;
@@ -13,120 +13,169 @@ html {
   scroll-behavior: smooth;
 }
 
-.main-container{
-    /* width: 100vw; */
-    /* height: 100vh; */
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    background-color: red;
-    background: linear-gradient(
+.main-container {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: red;
+  background: linear-gradient(
     to bottom,
     rgba(197, 204, 207, 0.248),
     rgba(0, 0, 0, 0.174)
   );
 }
 
-.portfolio-icon img{
-    height: 50px;
-    width: 50px;
-    position: relative;
-    left: 15px;
+.portfolio-icon img {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  left: 15px;
 }
 
-.nav a{
-    text-decoration: none;
-    margin: 10px;
-    color: black;
-    position: relative;
-    left: 40px;
+.nav a {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+  position: relative;
+  left: 40px;
 }
 
 .nav a:hover {
-    font-family: inherit;
-    border: 0.5px solid white;
-    margin:0px;
-    color: black;
-    transition: all .5s;
-  }
-
-.hire-me button{
-    background-color: black;
-    color: white;
-    font-size: 15px;
-    padding: 10px 25px 10px 25px;
-    border-radius: 30px;
-    position: relative;
-    right: 0px;
-    left: 1000px;
+  font-family: inherit;
+  border: 0.5px solid white;
+  margin: 0px;
+  color: black;
+  transition: all 0.5s;
 }
 
-@media (max-width:560px){
-  .nav a{
+.hire-me button {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 10px 25px 10px 25px;
+  border-radius: 30px;
+  position: relative;
+  right: 0px;
+  left: 1000px;
+}
+
+@media (max-width: 560px) {
+  .nav a {
     font-size: 10px;
     color: black;
     left: 20px;
   }
 
-  .portfolio-icon img{
-    height:25px;
+  .portfolio-icon img {
+    height: 25px;
     width: 25px;
     position: relative;
     top: 5px;
     left: 15px;
-}
+  }
 
-.hire-me button{
+  .hire-me button {
     font-size: 10px;
+  }
 }
-}
-
 
 /* ---home-- */
 
-.home{
-    background-image: url(../images/top-view-desk-dark-concept-with-copy-space.jpg);
-    background-size: cover;
-    height: 100vh;
-    margin-right: 0px;
-    display: flex;
-    align-items: center;
+.home {
+  background-image: url(../images/top-view-desk-dark-concept-with-copy-space.jpg);
+  background-size: cover;
+  height: 100vh;
+  margin-right: 0px;
+  display: flex;
+  align-items: center;
 }
 
 #img1 {
-    object-fit: cover;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: solid black;
-    cursor: pointer;
-    background-size: cover;
-    margin-right: 80px;
-    margin-left: 40px;
-    border-width: 5px;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid black;
+  cursor: pointer;
+  background-size: cover;
+  margin-right: 80px;
+  margin-left: 40px;
+  border-width: 5px;
 }
 
-.home h3{
-    font-size: 40px;
-    color: red;
-    line-height: 40px;
+.home h3 {
+  font-size: 40px;
+  color: red;
+  line-height: 40px;
 }
 
-.home span{
-    font-size: 20px;
-    color: white;
-    line-height: 40px;
+.home span {
+  font-size: 20px;
+  color: white;
+  line-height: 40px;
 }
 
-#desig{
-    animation-name: fadeInUp; /* Apply the animation */
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+#desig {
+  animation-name: fadeInUp; /* Apply the animation */
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes fadeInUp {
-    from {
-      opacity: 0; /* Fade in the text */
-      color: yellow;
+  from {
+    opacity: 0; /* Fade in the text */
+    color: yellow;
+  }
+}
+
+.button {
+  background-color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 30px;
+  color: white;
+  margin-right: 25px;
+  position: relative;
+  transition: all 0.5s;
+  margin-top: 10px;
+}
+.button a {
+  text-decoration: none;
+  color: white;
+}
+.button:hover {
+  color: white;
+  scale: 1.02;
+  box-shadow: 0 0 15px white;
+}
+
+.det{
+    margin-top: 15px;
+    /* line-height: 50px; */
+    color: white;
+}
+
+/* ---Responsiveness--- */
+@media (max-width: 560px) {
+    .home{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100vw;
+        height: auto;
+        padding: 10px;
+    }
+    
+    #img1 {
+        width: 200px;
+        height: 200px;
+      }
+
+    .button{
+        width: 50vw;
     }
   }
