@@ -14,7 +14,6 @@ html {
 }
 
 .main-container {
-  /* width: 100vw; */
   /* height: 100vh; */
   display: flex;
   justify-content: start;
@@ -35,17 +34,17 @@ html {
 }
 
 .nav a {
+    font-size: 20px;
   text-decoration: none;
-  margin: 10px;
+  margin-right: 10px;
   color: black;
   position: relative;
-  left: 40px;
+  left: 60px;
 }
 
 .nav a:hover {
   font-family: inherit;
-  border: 0.5px solid white;
-  margin: 0px;
+  border: 1px solid black;
   color: black;
   transition: all 0.5s;
 }
@@ -58,26 +57,33 @@ html {
   border-radius: 30px;
   position: relative;
   right: 0px;
-  left: 1000px;
+  left: 30px;
 }
 
 @media (max-width: 560px) {
   .nav a {
     font-size: 10px;
     color: black;
-    left: 20px;
+    left: 40px;
   }
 
   .portfolio-icon img {
     height: 25px;
     width: 25px;
     position: relative;
-    top: 5px;
-    left: 15px;
+    /* top: 5px; */
+    left: 10px;
   }
 
   .hire-me button {
-    font-size: 10px;
+    background-color: black;
+    color: white;
+    font-size: 8px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: relative;
+    right: 0px;
+    left: 20px;
   }
 }
 
@@ -97,12 +103,12 @@ html {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: solid black;
+  border: none;
   cursor: pointer;
   background-size: cover;
   margin-right: 80px;
   margin-left: 40px;
-  border-width: 5px;
+  box-shadow: 0px 2px 2px 5px rgb(94, 126, 6);
 }
 
 .home h3 {
@@ -156,6 +162,7 @@ html {
     margin-top: 15px;
     /* line-height: 50px; */
     color: white;
+    text-align: justify;
 }
 
 /* ---Responsiveness--- */
@@ -173,9 +180,87 @@ html {
     #img1 {
         width: 200px;
         height: 200px;
+        margin: 20px;
       }
 
     .button{
-        width: 50vw;
+        width: 60vw;
+    }
+
+    .home h3 {
+        font-size: 30px;
+        color: red;
+      }
+      
+      .home span {
+        font-size: 20px;
+        color: white;
+        line-height: 30px;
+      }
+
+      .det{
+        margin-top: 15px;
+        font-size: 10px;
+        text-align: center;
+    }
+  }
+
+  @media (min-width: 767px) and (max-width:991px){
+    .home{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100vw;
+        height: auto;
+        padding: 10px;
+        text-wrap: wrap;
+    }
+    
+    #img1 {
+        align-items: center;
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+      }
+
+    .button{
+        width: 20vw;
+    }
+
+    .det{
+        margin-top: 15px;
+        font-size: 15px;
+        text-align: center;
+    }
+  }
+  
+  @media (min-width: 561px) and (max-width:766px){
+    .home{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100vw;
+        height: auto;
+        padding: 10px;
+        text-wrap: wrap;
+    }
+    
+    #img1 {
+        align-items: center;
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+      }
+
+    .button{
+        width: 20vw;
+    }
+
+    .det{
+        margin-top: 15px;
+        font-size: 15px;
+        text-align: center;
     }
   }
