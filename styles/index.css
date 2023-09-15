@@ -1,22 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@300;500;700&display=swap");
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family:Arial,Helvetica,sans-serif;
+  cursor: pointer;
 }
 
-/* body{
+body{
   font-family: Poppins;
   cursor: pointer;
-} */
+}
 html {
   scroll-behavior: smooth;
 }
 
 .main-container {
-  /* height: 100vh; */
+  width: 100%;
+  position: fixed;
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
   align-items: center;
   background-color: red;
   background: linear-gradient(
@@ -30,60 +33,141 @@ html {
   height: 50px;
   width: 50px;
   position: relative;
-  left: 15px;
+  left: -110px;
+}
+
+.nav ul{
+  display: flex;
+  justify-content: center;
 }
 
 .nav a {
-    font-size: 20px;
+  font-size: 20px;
   text-decoration: none;
-  margin-right: 10px;
-  color: black;
+  margin: 8px;
+  color: white;
   position: relative;
-  left: 60px;
+  /* left: 60px; */
 }
 
 .nav a:hover {
-  font-family: inherit;
-  border: 1px solid black;
+  padding: 2px;
+  border: 1px solid white;
   color: black;
   transition: all 0.5s;
+  scale: 1.2;
 }
 
-.hire-me button {
+.hire button {
   background-color: black;
   color: white;
-  font-size: 15px;
-  padding: 10px 25px 10px 25px;
+  font-size: 12px;
+  padding: 8px 15px;
   border-radius: 30px;
   position: relative;
-  right: 0px;
-  left: 30px;
+  left: 90px;
 }
 
 @media (max-width: 560px) {
+  .main-container{
+    width:100vh;
+  }
   .nav a {
     font-size: 10px;
-    color: black;
-    left: 40px;
+    color: white;
+    /* left: 40px; */
   }
 
   .portfolio-icon img {
     height: 25px;
     width: 25px;
     position: relative;
-    /* top: 5px; */
-    left: 10px;
+    top: 5px;
+    left: -20px;
   }
 
-  .hire-me button {
-    background-color: black;
-    color: white;
-    font-size: 8px;
+  .hire button {
+    font-size: 5px;
     padding: 5px 10px;
     border-radius: 20px;
     position: relative;
     right: 0px;
-    left: 20px;
+    left: -35px;
+  }
+}
+
+@media (min-width: 561px) and (max-width:766px){
+  .nav a {
+    font-size: 12px;
+    color: white;
+    /* left: 40px; */
+  }
+
+  .portfolio-icon img {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    top: 5px;
+    left: -30px;
+  }
+
+  .hire button {
+    font-size: 5px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: relative;
+    /* right: 40px; */
+    left: 40px;
+  }
+}
+
+@media (min-width:766px) and (max-width:991px){
+  .nav a {
+    font-size: 15px;
+    color: white;
+    /* left: 40px; */
+  }
+
+  .portfolio-icon img {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 5px;
+    left: -60px;
+  }
+
+  .hire button {
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: relative;
+    /* right: 40px; */
+    left: 60px;
+  }
+}
+
+@media (min-width:911px) and (max-width:1200px){
+  .nav a {
+    font-size: 18px;
+    color: white;
+    /* left: 40px; */
+  }
+
+  .portfolio-icon img {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 5px;
+    left: -60px;
+  }
+
+  .hire button {
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: relative;
+    /* right: 40px; */
+    left: 60px;
   }
 }
 
@@ -131,8 +215,8 @@ html {
 
 @keyframes fadeInUp {
   from {
-    opacity: 0; /* Fade in the text */
-    color: yellow;
+    opacity: 100%; /* Fade in the text */
+    color: red;
   }
 }
 
@@ -159,10 +243,11 @@ html {
 }
 
 .det{
+    font-size: 20px;
     margin-top: 15px;
-    /* line-height: 50px; */
+    line-height: 35px;
     color: white;
-    text-align: justify;
+    font-weight: 500;
 }
 
 /* ---Responsiveness--- */
@@ -178,6 +263,7 @@ html {
     }
     
     #img1 {
+      justify-content: center;
         width: 200px;
         height: 200px;
         margin: 20px;
@@ -199,7 +285,7 @@ html {
       }
 
       .det{
-        margin-top: 15px;
+        margin: 15px 10px;
         font-size: 10px;
         text-align: center;
     }
@@ -213,7 +299,7 @@ html {
         justify-content: center;
         width: 100vw;
         height: auto;
-        padding: 10px;
+        /* padding: 10px; */
         text-wrap: wrap;
     }
     
@@ -229,7 +315,7 @@ html {
     }
 
     .det{
-        margin-top: 15px;
+        margin: 15px 10px;
         font-size: 15px;
         text-align: center;
     }
@@ -239,16 +325,16 @@ html {
     .home{
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: start;
         justify-content: center;
         width: 100vw;
         height: auto;
-        padding: 10px;
+        /* padding: 10px; */
         text-wrap: wrap;
     }
     
     #img1 {
-        align-items: center;
+        align-items: start;
         width: 250px;
         height: 250px;
         margin: 20px;
@@ -256,11 +342,365 @@ html {
 
     .button{
         width: 20vw;
+        font-size: 12px;
     }
 
     .det{
-        margin-top: 15px;
+      margin: 15px 10px;
         font-size: 15px;
-        text-align: center;
+        text-align: start;
     }
   }
+
+  /* --card-section-- */
+
+  .academics{
+    width: inherit;
+    /* height: 100vh; */
+    background-color: rgba(197, 192, 192, 0.485);
+    padding-top: 90px;
+  }
+
+  .acad{
+    display: flex;
+    font-size: 30px;
+    font-weight: 500px;
+    padding:20px 100px;
+    gap: 10px;
+  }
+
+  .fa-graduation-cap{
+    margin-top: 20px;
+  }
+
+  .card-box{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-section{
+    background-color: white;
+    width: 280px;
+    height: 350px;
+    margin: 10px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 2px 5px 5px 5px grey;
+  }
+  
+  .card-content{
+    align-items: end;
+  }
+  .card-img {
+    background-size: cover;
+    width: 280px;
+    height: 180px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: 2px 5px 10px black;
+  }
+  
+  .card-section ul{
+    list-style-type: none;
+    line-height: 25px;
+    text-align: start;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .hire-me button{
+    background-color: black;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    transition: all .5s;
+  }
+  .hire-me button:hover {
+    color: white;
+    scale: 1.02;
+    box-shadow: 0 0 15px red;
+  }
+
+  .hire-more button{
+    background-color: black;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    transition: all .5s;
+  }
+  .hire-more button:hover {
+    color: white;
+    scale: 1.02;
+    box-shadow: 0 0 15px red;
+  }
+
+  /* --respnsiveness-- */
+
+  @media (max-width: 560px) {
+    .academics{
+      width: inherit;
+      height: auto;
+      padding: 10px 0 10px 0;
+    }
+
+    .acad{
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .fa-graduation-cap{
+      margin-top: 10px;
+    }
+
+    .card-box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .hire-me button{
+      font-size: 10px;
+      position: relative;
+      left: 10px;
+      top: 10px;
+      width: 13vh;
+      padding: 5px;
+      border-radius: 15px;
+      margin: 0px;
+    }
+    .hire-more button{
+      font-size: 10px;
+      position: relative;
+      left: 10px;
+      top: 10px;
+      width: 18vh;
+      padding: 5px;
+      border-radius: 15px;
+      margin: 0px;
+    }
+  }
+
+  @media (min-width: 767px) and (max-width:1200px){
+    .academics{
+      width: inherit;
+      height: auto;
+      text-align: center;
+      padding: 10px 0 10px 0;
+    }
+    .acad{
+      justify-content: center;
+      font-size: 25px;
+    }
+    .card-box{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .hire-me button{
+      font-size: 10px;
+      position: relative;
+      left: 10px;
+      padding: 5px;
+      border-radius: 15px;
+      margin: 0px;
+    }
+    .hire-more button{
+      font-size: 10px;
+      position: relative;
+      left: 10px;
+      padding: 5px;
+      border-radius: 15px;
+      margin: 0px;
+    }
+  }
+
+  @media (min-width: 1200px){
+    .academics{
+      width: inherit;
+      height: 100vh;
+      text-align: auto;
+      /* padding: 10px 0 10px 0; */
+    }
+    .acad{
+      justify-content: start;
+      font-size: 25px;
+      margin-left: 70px;
+    }
+    .card-box{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (min-width: 561px) and (max-width:766px){
+    .academics{
+      width: inherit;
+      height: auto;
+      text-align: center;
+      padding: 10px 0 10px 0;
+    }
+
+    .acad{
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .fa-graduation-cap{
+      margin-top: 15px;
+    }
+
+    .card-box{
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .hire-me button{
+      font-size: 10px;
+      position: relative;
+      left: 10px;
+      top: 10px;
+      padding: 5px;
+      border-radius: 15px;
+      margin: 0px;
+    }
+    .hire-more button{
+      font-size: 10px;
+      position: relative;
+      left: 10px;
+      top: 10px;
+      padding: 5px;
+      border-radius: 15px;
+      margin: 0px;
+    }
+  }
+
+  
+/* -------Contact------ */
+
+.contact{
+  width: inherit;
+  height: 100%;
+  background-color: rgb(94, 123, 113);
+}
+
+#mc h2{
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+  color: black;
+  padding: 40px 0 0 0;
+}
+
+.fo{
+  display: flex;
+  justify-content: center;
+}
+
+#form{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 20px;
+  width: 50%;
+}
+
+.item{
+  text-align: center;
+  padding: 12px;
+  margin: 15px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.item3{
+  width: 90%;
+}
+
+.item4{
+  width: 90%;
+}
+
+input:hover{
+  box-shadow: 0 1px 2px 4px rgb(19, 136, 190);
+}
+textarea:hover{
+  box-shadow: 0 1px 2px 4px rgb(19, 136, 190);
+}
+
+.item5{
+  background-color: rgb(22, 186, 227);
+  color: white;
+  font-size: 20px;
+  padding: 15px 25px 15px 25px;
+  border-radius: 30px;
+}
+
+  /* .item5:hover{
+  color: black;
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px white;
+} */
+
+/* 
+
+/* --respnsiveness-- */
+
+@media (max-width: 560px) {
+  .form{}
+  .contact button{
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 767px) and (max-width:1200px){
+  
+}
+
+@media (min-width: 1200px){
+ 
+}
+
+@media (min-width: 561px) and (max-width:766px){
+  
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    text-decoration: none;
+}
+
+a i{
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+a i:hover{
+    color: rgb(30, 215, 96);
+}
+
+footer p{
+    color: rgb(170, 170, 170);
+} */
