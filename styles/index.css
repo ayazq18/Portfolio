@@ -64,7 +64,7 @@ html {
   font-size: 12px;
   padding: 8px 15px;
   border-radius: 30px;
-  position: relative;
+  position: fixed;
   left: 90px;
 }
 
@@ -73,9 +73,10 @@ html {
     width:100vh;
   }
   .nav a {
-    font-size: 10px;
+    font-size: 8px;
     color: white;
-    /* left: 40px; */
+    /* justify-content: center; */
+    left: -160px;
   }
 
   .portfolio-icon img {
@@ -83,7 +84,7 @@ html {
     width: 25px;
     position: relative;
     top: 5px;
-    left: -20px;
+    left: -60px;
   }
 
   .hire button {
@@ -92,7 +93,7 @@ html {
     border-radius: 20px;
     position: relative;
     right: 0px;
-    left: -35px;
+    left: -290px;
   }
 }
 
@@ -257,9 +258,9 @@ html {
         align-items: center;
         text-align: center;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         height: auto;
-        padding: 10px;
+        padding-top: 10px;
     }
     
     #img1 {
@@ -358,19 +359,23 @@ html {
     width: inherit;
     /* height: 100vh; */
     background-color: rgba(197, 192, 192, 0.485);
-    padding-top: 90px;
+    padding-top: 40px;
   }
 
   .acad{
     display: flex;
     font-size: 30px;
     font-weight: 500px;
-    padding:20px 100px;
+    padding:40px 100px;
     gap: 10px;
+    position: relative;
+    right: 70px;
   }
 
   .fa-graduation-cap{
     margin-top: 20px;
+    position: relative;
+    /* left: -20px; */
   }
 
   .card-box{
@@ -401,11 +406,15 @@ html {
   }
   
   .card-section ul{
+    font-family: Arial, Helvetica, sans-serif;
     list-style-type: none;
     line-height: 25px;
     text-align: start;
     margin-left: 10px;
     margin-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: 20px;
   }
 
   .hire-me button{
@@ -417,13 +426,13 @@ html {
     color: white;
     position: relative;
     left: 10px;
-    top: 20px;
+    top: 15px;
     transition: all .5s;
   }
   .hire-me button:hover {
     color: white;
     scale: 1.02;
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 15px wheat;
   }
 
   .hire-more button{
@@ -435,13 +444,13 @@ html {
     color: white;
     position: relative;
     left: 10px;
-    top: 20px;
+    top: 15px;
     transition: all .5s;
   }
   .hire-more button:hover {
     color: white;
     scale: 1.02;
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 15px wheat;
   }
 
   /* --respnsiveness-- */
@@ -454,11 +463,36 @@ html {
     }
 
     .acad{
+      right: 0px;
       justify-content: center;
+      flex-wrap: wrap;
       font-size: 15px;
     }
 
     .fa-graduation-cap{
+      margin-top: 10px;
+    }
+
+    .card-section{
+      width: 200px;
+      height: 250px;
+      margin: 10px;
+      border-radius: 15px;
+    }
+
+    .card-img {
+      width: 200px;
+      height: 130px;
+    }
+
+    .card-section ul{
+      list-style-type: none;
+      line-height: 17px;
+      text-align: start;
+      margin-left: 10px;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 100;
       margin-top: 10px;
     }
 
@@ -492,7 +526,7 @@ html {
 
   @media (min-width: 767px) and (max-width:1200px){
     .academics{
-      width: inherit;
+      width: 100vw;
       height: auto;
       text-align: center;
       padding: 10px 0 10px 0;
@@ -500,6 +534,7 @@ html {
     .acad{
       justify-content: center;
       font-size: 25px;
+      right: 0px;
     }
     .card-box{
       display: flex;
@@ -554,7 +589,9 @@ html {
 
     .acad{
       justify-content: center;
+      flex-wrap: wrap;
       font-size: 18px;
+      right: 0px;
     }
 
     .fa-graduation-cap{
@@ -636,7 +673,7 @@ html {
 }
 
 input:hover{
-  box-shadow: 0 1px 2px 4px rgb(19, 136, 190);
+  box-shadow: 0 1px 2px 4px rgb(64, 103, 94);
 }
 textarea:hover{
   box-shadow: 0 1px 2px 4px rgb(19, 136, 190);
