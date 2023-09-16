@@ -68,7 +68,7 @@ html {
   left: 90px;
 }
 
-@media (max-width: 560px) {
+@media (min-width: 360px) and (max-width: 915px) {
   .main-container{
     width:100vh;
   }
@@ -271,7 +271,10 @@ html {
       }
 
     .button{
-        width: 60vw;
+        font-size: 12px;
+        width: 28vw;
+        justify-content: center;
+        left: 10px;
     }
 
     .home h3 {
@@ -455,7 +458,7 @@ html {
 
   /* --respnsiveness-- */
 
-  @media (max-width: 560px) {
+  @media (min-width: 360px) and (max-width:915px){
     .academics{
       width: inherit;
       height: auto;
@@ -698,7 +701,7 @@ textarea:hover{
 
 /* --respnsiveness-- */
 
-@media (max-width: 560px) {
+/* @media (max-width: 560px) {
   .form{}
   .contact button{
     font-size: 10px;
@@ -715,7 +718,7 @@ textarea:hover{
 
 @media (min-width: 561px) and (max-width:766px){
   
-}
+} */
 
 footer{
     background-color: black;
@@ -740,4 +743,4 @@ a i:hover{
 
 footer p{
     color: rgb(170, 170, 170);
-} */
+}
