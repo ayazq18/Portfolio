@@ -7,7 +7,7 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="../styles/index.css" />
   <link style="border-radius: 50%" rel="icon" href="./Profile_pic.jpeg">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
 
 </head>
@@ -16,7 +16,7 @@
   <header>
     <div class="head-section">
       <div class="nav-bar">
-        <div class="port-logo f-w-700 letter-spacing3"><span>Ayaz </span> Qureshi</div>
+        <div class="port-logo"><span>Ayaz </span> Qureshi</div>
         <div class="nav-links">
           <ul class="flex">
             <li><a href="#home">HOME</a></li>
@@ -53,7 +53,6 @@
   <section id="academics" class="academics">
     <div class="acad">
       <i class="fa-solid fa-graduation-cap"></i>
-      <hr />
       <h1>Academics</h1>
       <div class="hire-me">
         <a href="feedback.html" target="_blank"><button type="menu">Feedback</button></a></button>
@@ -148,11 +147,12 @@
         <label for="name"></label><input class=" item item1" type="text" name="name" placeholder="Your Name" />
         <label for="email"></label><input class=" item item2" type="email" name="email" placeholder="Your Email" />
         <label for="subject"></label><input class=" item item3" type="text" name="subject" placeholder="Subject" />
-        <label for="message"></label><textarea class=" item item4" rows="4" cols="30" type="text" name="message"
+        <label for="message"></label><textarea class=" item item4" aria-valuemax="400px" type="text" name="message"
           placeholder="Message"></textarea>
-        <button class=" item item5" name="button" type="submit">Send Message</button>
+        <button class="  item5" name="button" type="submit">Send Message</button>
       </form>
     </div>
+  </div>
 
     <footer id="contact">
       <a href="#">
