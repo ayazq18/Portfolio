@@ -8,36 +8,39 @@
   <link rel="stylesheet" href="../styles/index.css" />
   <link style="border-radius: 50%" rel="icon" href="./Profile_pic.jpeg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+
 </head>
 
 <body>
-  <div class="main-container">
-    <div class="portfolio-icon">
-      <img src="https://cdn3d.iconscout.com/3d/premium/thumb/portfolio-6824186-5602837.png?f=webp" alt="Portfolio-icon">
+  <header>
+    <div class="head-section">
+      <div class="nav-bar">
+        <div class="port-logo f-w-700 letter-spacing3"><span>Ayaz </span> Qureshi</div>
+        <div class="nav-links">
+          <ul class="flex">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#academics">ACADEMICS</a></li>
+            <li><a href="#skill">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT ME</a></li>
+          </ul>
+        </div>
+        <button class="hire-btn"><a href="#home">HIRE ME</a></button>
+        <img class="hamburger" src="../images/bars-solid.svg" alt="">
+      </div>
     </div>
-    <nav class="nav">
-      <ul>
-        <a href="#home">Home</a>
-        <a href="#academics">Academics</a>
-        <a href="#quality">Quality</a>
-        <a href="#skills">Skill</a>
-        <a href="#contact">Contact</a>
-      </ul>
-    </nav>
-    <div class="hire">
-      <a href="#home"><button type="button">Hire me</button></a></button>
-    </div>
-  </div>
+  </header>
 
   <!-- Home -->
   <!-- <a href="#home"><i class="fa-solid fa-circle-chevron-up"></i></a></a> -->
   <section class="home" id="home">
     <div>
-      <img src="../images/Profile_pic.jpeg" alt="Profile Pic" id="img1" />
+      <div id="img1"></div>
     </div>
     <div>
       <h3 id="I">Hi,</h3><br /><span>I'm Ayaz S. Qureshi</span><br /><span id="desig">Front-End Developer</span>
-      <div> <a href="./AYAZ_Qureshi.docx"><button type="button" class="button">Download CV</button></button></a>
+      <div> <a href="../images/AYAZ_Qureshi.docx"><button type="button" class="button">Download CV</button></button></a>
         <a href="https://www.linkedin.com/in/ayaz-qureshi-208712b6/" target="_blank"><button type="button"
             class="button">LinkedIn</button></a></button>
         <p class="det">I am a Bachelor of Engineering, Specialized in Mechanical.<br> I have completed the degree in the
@@ -53,7 +56,7 @@
       <hr />
       <h1>Academics</h1>
       <div class="hire-me">
-        <a href="#home"><button type="menu">Hire me</button></a></button>
+        <a href="feedback.html" target="_blank"><button type="menu">Feedback</button></a></button>
       </div>
       <div class="hire-more">
         <a href="#home"><button type="menu">Learn more</button></a></button>
@@ -65,10 +68,10 @@
         <div class="card-content">
           <div class="card-list">
             <ul class="ist-li">
-              <li style=" font-size:15px; font-weight: 700;;">Bachelor of Engineering</li>
+              <li style=" font-size:20px; font-weight: 700;;">Bachelor of Engineering</li>
               <li>Degree year: 2020</li>
               <li>Rank : Distinction</li>
-              <li>College : Anjuman College of Engineering & Technology, Nagpur</li>
+              <li>College : Anjuman College of Engineering & Technology</li>
             </ul>
           </div>
         </div>
@@ -78,7 +81,7 @@
         <div class="card-content">
           <div class="card-list">
             <ul class="ist-li">
-              <li style=" font-size:15px; font-weight: 700;">Higher Secondary Certificate</li>
+              <li style=" font-size:25px; font-weight: 700;">Higher Secondary</li>
               <li>Completion year : 2016</li>
               <li>Percentage : 64.70%</li>
               <li>College : S.K Porwal College, Kamptee</li>
@@ -91,7 +94,7 @@
         <div class="card-content">
           <div class="card-list">
             <ul class="ist-li">
-              <li style=" font-size:15px;font-weight: 700;">Senior Secondary Certificate</li>
+              <li style=" font-size:25px;font-weight: 700;">Senior Secondary</li>
               <li>Completion year : 2014</li>
               <li>Perentage : 70.40%</li>
               <li>School : St. Joseph's Convent, Kamptee</li>
@@ -104,7 +107,7 @@
         <div class="card-content">
           <div class="card-list">
             <ul class="ist-li">
-              <li style=" font-size:15px; font-weight: 700;">Front-End Developer</li>
+              <li style=" font-size:25px; font-weight: 700;">Front-End Developer</li>
               <li>Certification year: 2023</li>
               <li>Performance : Good</li>
               <li>Institute : Newton School</li>
@@ -115,6 +118,27 @@
     </div>
   </section>
 
+
+<!-- ------Skills------- -->
+<section class="skill" id="skill">
+  <div class="myskill">
+    <h1>My Skills</h1>
+    <li><h3>HTML</h3>
+      <span class="bar"><span class="html"></span></span>
+    </li>
+    <li><h3>CSS</h3>
+      <span class="bar"><span class="css"></span></span>
+    </li>
+    <li><h3>JS</h3>
+      <span class="bar"><span class="js"></span></span>
+    </li>
+    <li><h3>JAVA</h3>
+      <span class="bar"><span class="java"></span></span>
+    </li>
+  </div>
+</section>
+
+  <!-- ---contact--- -->
   <div id="contact" class="contact">
     <div id="mc">
       <h2>CONTACT ME</h2>
@@ -132,18 +156,18 @@
 
     <footer id="contact">
       <a href="#">
-          <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-twitter"></i>
       </a>
       <a href="#">
-          <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-instagram"></i>
       </a>
       <a href="#">
-          <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook"></i>
       </a>
       <a href="#">
-          <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-envelope"></i>
       </a>
-      <p>© Copyright 2023 Portfolio</p> 
+      <p>© Copyright 2023 Portfolio</p>
     </footer>
 </body>
 
