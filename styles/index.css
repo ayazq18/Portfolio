@@ -32,15 +32,15 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 15px 50px;
+  padding: 10px 50px;
   
 }
 
 .head-section{
-  width: 100%;
+    width: 100%;
     margin: 0 auto;
     position: fixed;
-    background-color: gray;
+    background: linear-gradient(to bottom, rgb(42, 31, 31), rgb(120, 108, 108));
     z-index: 1;
 }
 
@@ -151,6 +151,7 @@ ul li a:hover::before{
     justify-content: space-between;
     font-size: 10px;
     padding: 10px 6px;
+    
   }
   .nav-links ul a{
     display: none;
@@ -277,13 +278,36 @@ ul li a:hover::before{
 
 /* ---home-- */
 
+.fa-circle-chevron-up {
+  image-resolution: 10px;
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  font-size: 30px;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: scroll;
+}
+@keyframes scroll {
+  to {
+    transform: scale(1.02);
+    padding-bottom: 15px;
+  }
+} 
+
 .home {
-  background-image: url(../images/top-view-desk-dark-concept-with-copy-space.jpg);
+  background-image: url(../images/top-view-workspace-with-copy-space-succulent.jpg);
   background-size: cover;
   height: 100vh;
   /* margin-top: 70px; */
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #img1 {
@@ -291,7 +315,7 @@ ul li a:hover::before{
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: none;
+  border: 2px solid black;
   cursor: pointer;
   background-size: cover;
   margin-right: 80px;
@@ -358,6 +382,10 @@ ul li a:hover::before{
 
 /* ---Responsiveness--- */
 @media (min-width: 360px) and (max-width: 767px) {
+  .fa-circle-chevron-up {
+    visibility: hidden;
+  }
+
   .home {
     flex-direction: column;
     align-items: center;
@@ -676,20 +704,24 @@ ul li a:hover::before{
   height: 100vh;
   font-family: Gill Sans, sans-serif;
   list-style: none;
-  background-color: gray;
+  background-image: url(../images/light_background_texture_69531_1920x1080.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background:linear-gradient(to bottom, rgb(123, 86, 86), rgb(254,582,254)); */
 }
 
 .myskill h1 {
+  font-size: 40px;
   font-weight: 700;
   text-align: center;
   color: black;
-  text-decoration: underline;
+  position: relative;
 }
 
 .myskill h3 {
   margin: 5px;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   color: black;
 }
 
@@ -700,8 +732,24 @@ ul li a:hover::before{
   margin: auto;
   width: 500px;
   color: #fff;
-  /* padding: 20px; */
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 1), 0 10px 10px rgba(0, 0, 0, 1);
+  z-index: 1;
+}
+
+.myskill::before{
+  content: '';
+  width: 100%;
+  height: 0;
+  background-color:  rgb(42, 31, 31);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.myskill:hover::before{
+  height: 100%;
 }
 
 .myskill li {
@@ -713,11 +761,11 @@ ul li a:hover::before{
   background: #353b48;
   display: block;
   height: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(251, 249, 249, 0.5);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(25, 8, 25, 1);
 }
 
 .bar:hover {
@@ -737,6 +785,7 @@ ul li a:hover::before{
 .html {
   width: 90%;
   animation: html 3s;
+  animation-delay: 2s;
 }
 @keyframes html {
   0% {
@@ -750,6 +799,7 @@ ul li a:hover::before{
 .css {
   width: 80%;
   animation: css 3s;
+  animation-delay: 2s;
 }
 @keyframes css {
   0% {
@@ -763,6 +813,7 @@ ul li a:hover::before{
 .js {
   width: 70%;
   animation: js 3s;
+  animation-delay: 2s;
 }
 @keyframes js {
   0% {
@@ -776,6 +827,7 @@ ul li a:hover::before{
 .java {
   width: 60%;
   animation: java 3s;
+  animation-delay: 2s;
 }
 @keyframes java {
   0% {
@@ -830,6 +882,251 @@ ul li a:hover::before{
   }
 }
 
+/* <!-- My Projects --> */
+
+#project-container{
+  margin-top: -40px;
+  width: inherit;
+  height: 100vh;
+  gap: 30px;
+  padding-top: 20px;
+  /* background-image: url(../images/pencils-sharpener-with-space.jpg); */
+
+}
+
+.project-title{
+  display: flex;
+  justify-content: start;
+  position: relative;
+  width: fit-content;
+  top: 40px;
+  left: 40px;
+  gap: 30px;
+}
+
+.project-title img{
+  width: 60px;
+  height: 60px;
+}
+
+.project-title h1{
+  position: relative;
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(7, 7, 7);
+  letter-spacing: 2PX;
+}
+
+
+.project-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-section{
+  width: 30vw;
+  height: 300px;
+  margin-top: 150px;
+  background-color: whitesmoke;
+  box-shadow: 2px 5px 5px 5px grey;
+  border-radius: 20px;
+}
+
+.project-content{
+  margin-bottom: 100px;
+}
+
+.project-content h2{
+  text-wrap: nowrap;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px;
+  width: 300px;
+  color: white;
+  background-color: black;
+  border: 1px solid orange;
+}
+
+#mp{
+  font-size: 30px;
+}
+#sl{
+  font-size: 20px;
+  font-weight: 800;
+  position: relative;
+  top: 10px;
+}
+
+.portfolio-img{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 30vw;
+  height: 230px;
+}
+
+.portfolio-matter{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.link-icon{
+ color: #0d0df6;
+ font-size: 20px;
+ box-shadow: 0px 0px 5px white;
+ position: relative;
+ left: -50px;
+}
+
+.portfolio-matter a i {
+  top: 25px;
+}
+
+
+/* --mediaquery-- */
+@media (min-width: 360px) and (max-width: 767px) {
+  #project-container{
+    height: 110%;
+    padding-bottom: 20px;
+  }
+
+  .project-title{
+    justify-content: center;
+    left: 0px;
+    gap: 10px;
+  }
+
+  .project-title img{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .project-title h1{
+    font-size: 30px;
+  }
+
+  .project-box{
+   flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .project-section{
+    width: 80vw;
+    height: 350px;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    box-shadow: 2px 5px 5px 5px grey;
+  }
+
+  .portfolio-img{
+    width: 80vw;
+    height: 250px;
+  }
+
+  .project-content h2{
+    width: 200px;
+  }
+
+  #mp{
+    font-size: 20px;
+  }
+  #sl{
+    font-size: 15px;
+    font-weight: 800;
+    position: relative;
+    top: 10px;
+    width: 60vw;
+  }
+
+  .portfolio-matter{
+    margin-top: 20px;
+  }
+ 
+  .link-icon{
+    color: #0d0df6;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px white;
+    position: relative;
+    left: -50px;
+   }
+   
+   .portfolio-matter a i {
+     top: 15px;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #project-container{
+    height: 110%;
+    padding-bottom: 20px;
+  }
+
+  .project-title{
+    justify-content: center;
+    left: 0px;
+    gap: 10px;
+  }
+
+  .project-title img{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .project-title h1{
+    font-size: 30px;
+  }
+
+  .project-box{
+   flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .project-section{
+    width: 80vw;
+    height: 350px;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    box-shadow: 2px 5px 5px 5px grey;
+  }
+
+  .portfolio-img{
+    width: 80vw;
+    height: 250px;
+  }
+
+  .project-content h2{
+    width: 200px;
+  }
+
+  #mp{
+    font-size: 20px;
+  }
+  #sl{
+    font-size: 15px;
+    font-weight: 800;
+    position: relative;
+    top: 10px;
+    width: 60vw;
+  }
+
+  .portfolio-matter{
+    margin-top: 20px;
+  }
+ 
+  .link-icon{
+    color: #0d0df6;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px white;
+    position: relative;
+    left: -50px;
+   }
+   
+   .portfolio-matter a i {
+     top: 15px;
+   }
+}
+
 /* -------Contact------ */
 
 .contact {
@@ -863,7 +1160,7 @@ ul li a:hover::before{
   text-align: center;
   width: 40vw;
   height: 70vh;
-  border: 2px solid black;
+  /* border: 2px solid white; */
 }
 
 .item {
@@ -875,22 +1172,6 @@ ul li a:hover::before{
   font-size: 20px;
   width: 400px;
 }
-
-/* .item1{
-  width: 305px;
-}
-
-.item2{
-  width: 305px;
-} */
-
-/* .item3 {
-  width: 90%;
-}
-
-.item4 {
-  width: 90%;
-} */
 
 .item:hover {
   box-shadow: 0 1px 2px 4px rgb(64, 103, 94);
@@ -905,9 +1186,15 @@ textarea:hover {
 .item5 {
   background-color: black;
   color: white;
+  margin-top: 10px;
   font-size: 15px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 30px;
+}
+
+fieldset{
+  padding: 20px;
+  color: white;
 }
 
 /* --respnsiveness-- */
@@ -1001,6 +1288,6 @@ a i:hover {
 }
 
 footer p {
-  padding-top: 5px;
+  padding-top: 10px;
   color: rgb(170, 170, 170);
 }
