@@ -13,7 +13,6 @@ body {
   cursor: pointer;
 }
 html {
-  overflow: smooth;
   scroll-behavior: smooth;
 }
 
@@ -299,6 +298,10 @@ ul li a:hover::before{
   }
 } 
 
+.fa-circle-chevron-up:hover{
+  color: red;
+}
+
 .home {
   background-image: url(../images/top-view-workspace-with-copy-space-succulent.jpg);
   background-size: cover;
@@ -329,22 +332,22 @@ ul li a:hover::before{
 }
 
 .home span {
-  font-size: 40px;
+  font-size: 45px;
   color: white;
   line-height: 70px;
   font-weight: 600;
 }
 
 #desig {
-  font-size: 30px;
-  animation-name: fadeInUp; /* Apply the animation */
+  font-size: 35px;
+  animation-name: fadeInUp;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 
 @keyframes fadeInUp {
   from {
-    opacity: 100%; /* Fade in the text */
+    opacity: 100%;
     color: rgb(220, 22, 22);
   }
 }
@@ -525,13 +528,23 @@ ul li a:hover::before{
 .card-section ul {
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
-  line-height: 25px;
+  line-height: 20px;
   text-align: start;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 14px;
-  font-weight: 100;
+  font-weight: 500;
   margin-top: 20px;
+}
+
+.card-section ul span{
+  font-weight: 700;
+}
+
+.list-li{
+  font-size: 20px;
+  font-weight: 700;
+  color: red;
 }
 
 .hire-me button {
@@ -608,10 +621,16 @@ ul li a:hover::before{
     line-height: 25px;
     text-align: start;
     margin-left: 10px;
-    margin-top: 5px;
-    font-size: 18px;
-    font-weight: 30;
     margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .list-li{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
   }
 
   .card-box {
@@ -740,7 +759,7 @@ ul li a:hover::before{
   content: '';
   width: 100%;
   height: 0;
-  background-color:  rgb(42, 31, 31);
+  background-color:  rgba(42, 31, 31, 0.573);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -906,12 +925,14 @@ ul li a:hover::before{
 .project-title img{
   width: 60px;
   height: 60px;
+  margin-top: 30px;
 }
 
 .project-title h1{
   position: relative;
   font-size: 50px;
   font-weight: 700;
+  margin-top: 30px;
   color: rgb(7, 7, 7);
   letter-spacing: 2PX;
 }
@@ -998,11 +1019,14 @@ ul li a:hover::before{
   }
 
   .project-title img{
+    margin-top: 0px;
     width: 30px;
     height: 30px;
   }
   
   .project-title h1{
+    margin-top: 0px;
+    margin-bottom: 10px;
     font-size: 30px;
   }
 
@@ -1069,12 +1093,15 @@ ul li a:hover::before{
   }
 
   .project-title img{
-    width: 30px;
-    height: 30px;
+    margin-top: 0px;
+    width: 40px;
+    height: 40px;
   }
   
   .project-title h1{
-    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 40px;
   }
 
   .project-box{
@@ -1085,7 +1112,7 @@ ul li a:hover::before{
   .project-section{
     width: 80vw;
     height: 350px;
-    margin-top: 50px;
+    margin-top: 80px;
     background-color: whitesmoke;
     box-shadow: 2px 5px 5px 5px grey;
   }
