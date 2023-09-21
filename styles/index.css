@@ -6,7 +6,6 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  cursor: pointer;
 }
 
 body {
@@ -150,7 +149,7 @@ ul li a:hover::before{
   .nav-bar{
     justify-content: space-between;
     font-size: 10px;
-    padding: 10px 6px;
+    padding: 10px 20px;
     
   }
   .nav-links ul a{
@@ -707,6 +706,8 @@ ul li a:hover::before{
   background-image: url(../images/light_background_texture_69531_1920x1080.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
   /* background:linear-gradient(to bottom, rgb(123, 86, 86), rgb(254,582,254)); */
 }
 
@@ -727,7 +728,6 @@ ul li a:hover::before{
 
 .myskill {
   position: relative;
-  top: 120px;
   padding: 30px;
   margin: auto;
   width: 500px;
@@ -845,9 +845,8 @@ ul li a:hover::before{
   }
   .myskill {
     position: relative;
-    top: 120px;
+    top: 0px;
     padding: 30px;
-    margin: auto;
     width: 300px;
   }
 
