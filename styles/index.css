@@ -930,7 +930,7 @@ ul li a:hover::before{
   margin-top: 150px;
   background-color: whitesmoke;
   box-shadow: 2px 5px 5px 5px grey;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .project-content{
@@ -963,6 +963,7 @@ ul li a:hover::before{
   border-top-left-radius: 20px;
   width: 30vw;
   height: 230px;
+  border-radius: 10px;
 }
 
 .portfolio-matter{
