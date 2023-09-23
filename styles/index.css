@@ -363,6 +363,7 @@ ul li a:hover::before{
   position: relative;
   transition: all 0.5s;
   margin-top: 10px;
+  font-weight: 600;
 }
 .button a {
   text-decoration: none;
@@ -377,9 +378,9 @@ ul li a:hover::before{
 .det {
   font-size: 18px;
   margin-top: 15px;
-  line-height: 25px;
+  line-height: 30px;
   color: white;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 /* ---Responsiveness--- */
@@ -407,7 +408,7 @@ ul li a:hover::before{
 
   .button {
     font-size: 8px;
-    width: 75px;
+    width: 80px;
     justify-content: center;
     left: 10px;
     padding: 5px 8px;
@@ -550,6 +551,7 @@ ul li a:hover::before{
 .hire-me button {
   background-color: black;
   font-size: 15px;
+  font-weight: 700;
   padding: 10px;
   cursor: pointer;
   border-radius: 20px;
@@ -568,6 +570,7 @@ ul li a:hover::before{
 .hire-more button {
   background-color: black;
   font-size: 15px;
+  font-weight: 700;
   padding: 10px;
   cursor: pointer;
   border-radius: 20px;
@@ -903,11 +906,11 @@ ul li a:hover::before{
 /* <!-- My Projects --> */
 
 #project-container{
-  margin-top: -40px;
   width: inherit;
   height: 100vh;
   gap: 30px;
   padding-top: 20px;
+  background-color: rgba(197, 192, 192, 0.485);
   /* background-image: url(../images/pencils-sharpener-with-space.jpg); */
 
 }
@@ -976,7 +979,7 @@ ul li a:hover::before{
   font-size: 20px;
   font-weight: 800;
   position: relative;
-  top: 10px;
+  top: 7px;
 }
 
 .portfolio-img{
@@ -984,7 +987,8 @@ ul li a:hover::before{
   border-top-left-radius: 20px;
   width: 30vw;
   height: 230px;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .portfolio-matter{
@@ -1001,9 +1005,8 @@ ul li a:hover::before{
 }
 
 .portfolio-matter a i {
-  top: 25px;
+  top: 20px;
 }
-
 
 /* --mediaquery-- */
 @media (min-width: 360px) and (max-width: 767px) {
